@@ -1,0 +1,563 @@
+(myenv) yan@MacBook-Pro-An Python-3.9.0 % parlai train_model -t blended_skill_talk -m transformer/generator -mf /Users/yan/desktop/bot_II/my_saved_model -veps 0.5 -vme 1 -bs 16
+
+15:01:33 | building dictionary first...
+15:01:33 | Opt:
+15:01:33 |     activation: relu
+15:01:33 |     adafactor_eps: '(1e-30, 0.001)'
+15:01:33 |     adam_eps: 1e-08
+15:01:33 |     add_p1_after_newln: False
+15:01:33 |     aggregate_micro: False
+15:01:33 |     allow_missing_init_opts: False
+15:01:33 |     attention_dropout: 0.0
+15:01:33 |     batchsize: 1
+15:01:33 |     beam_block_full_context: True
+15:01:33 |     beam_block_list_filename: None
+15:01:33 |     beam_block_ngram: -1
+15:01:33 |     beam_context_block_ngram: -1
+15:01:33 |     beam_delay: 30
+15:01:33 |     beam_length_penalty: 0.65
+15:01:33 |     beam_min_length: 1
+15:01:33 |     beam_size: 1
+15:01:33 |     betas: '(0.9, 0.999)'
+15:01:33 |     bpe_add_prefix_space: None
+15:01:33 |     bpe_debug: False
+15:01:33 |     bpe_dropout: None
+15:01:33 |     bpe_merge: None
+15:01:33 |     bpe_vocab: None
+15:01:33 |     checkpoint_activations: False
+15:01:33 |     compute_tokenized_bleu: False
+15:01:33 |     datapath: /Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/data
+15:01:33 |     datatype: train
+15:01:33 |     delimiter: '\n'
+15:01:33 |     dict_class: parlai.core.dict:DictionaryAgent
+15:01:33 |     dict_endtoken: __end__
+15:01:33 |     dict_file: /Users/yan/desktop/bot_II/my_saved_model.dict
+15:01:33 |     dict_include_test: False
+15:01:33 |     dict_include_valid: False
+15:01:33 |     dict_initpath: None
+15:01:33 |     dict_language: english
+15:01:33 |     dict_loaded: False
+15:01:33 |     dict_lower: False
+15:01:33 |     dict_max_ngram_size: -1
+15:01:33 |     dict_maxexs: -1
+15:01:33 |     dict_maxtokens: -1
+15:01:33 |     dict_minfreq: 0
+15:01:33 |     dict_nulltoken: __null__
+15:01:33 |     dict_starttoken: __start__
+15:01:33 |     dict_textfields: text,labels
+15:01:33 |     dict_tokenizer: re
+15:01:33 |     dict_unktoken: __unk__
+15:01:33 |     display_examples: False
+15:01:33 |     download_path: None
+15:01:33 |     dropout: 0.0
+15:01:33 |     dynamic_batching: None
+15:01:33 |     embedding_projection: random
+15:01:33 |     embedding_size: 300
+15:01:33 |     embedding_type: random
+15:01:33 |     embeddings_scale: True
+15:01:33 |     eval_batchsize: None
+15:01:33 |     eval_dynamic_batching: None
+15:01:33 |     evaltask: None
+15:01:33 |     ffn_size: 300
+15:01:33 |     final_extra_opt: 
+15:01:33 |     force_fp16_tokens: False
+15:01:33 |     fp16: False
+15:01:33 |     fp16_impl: safe
+15:01:33 |     gpu: -1
+15:01:33 |     gpu_beam_blocking: False
+15:01:33 |     gradient_clip: 0.1
+15:01:33 |     hide_labels: False
+15:01:33 |     history_add_global_end_token: None
+15:01:33 |     history_reversed: False
+15:01:33 |     history_size: -1
+15:01:33 |     image_cropsize: 224
+15:01:33 |     image_mode: no_image_model
+15:01:33 |     image_size: 256
+15:01:33 |     inference: greedy
+15:01:33 |     init_model: None
+15:01:33 |     init_opt: None
+15:01:33 |     interactive_mode: False
+15:01:33 |     invsqrt_lr_decay_gamma: -1
+15:01:33 |     is_debug: False
+15:01:33 |     label_truncate: None
+15:01:33 |     learn_positional_embeddings: False
+15:01:33 |     learningrate: 1
+15:01:33 |     load_from_checkpoint: True
+15:01:33 |     log_every_n_secs: -1
+15:01:33 |     log_every_n_steps: 50
+15:01:33 |     log_keep_fields: all
+15:01:33 |     loglevel: info
+15:01:33 |     lr_scheduler: reduceonplateau
+15:01:33 |     lr_scheduler_decay: 0.5
+15:01:33 |     lr_scheduler_patience: 3
+15:01:33 |     max_train_steps: -1
+15:01:33 |     max_train_time: -1
+15:01:33 |     metrics: default
+15:01:33 |     model: transformer/generator
+15:01:33 |     model_file: /Users/yan/desktop/bot_II/my_saved_model
+15:01:33 |     model_parallel: False
+15:01:33 |     momentum: 0
+15:01:33 |     multitask_weights: [1]
+15:01:33 |     mutators: None
+15:01:33 |     n_decoder_layers: -1
+15:01:33 |     n_encoder_layers: -1
+15:01:33 |     n_heads: 2
+15:01:33 |     n_layers: 2
+15:01:33 |     n_positions: None
+15:01:33 |     n_segments: 0
+15:01:33 |     nesterov: True
+15:01:33 |     no_cuda: False
+15:01:33 |     num_epochs: -1
+15:01:33 |     num_workers: 0
+15:01:33 |     nus: (0.7,)
+15:01:33 |     optimizer: sgd
+15:01:33 |     output_scaling: 1.0
+15:01:33 |     override: "{'task': 'blended_skill_talk', 'model': 'transformer/generator', 'model_file': '/Users/yan/desktop/bot_II/my_saved_model', 'validation_every_n_epochs': 0.5, 'validation_max_exs': 1, 'batchsize': 16}"
+15:01:33 |     parlai_home: /Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages
+15:01:33 |     person_tokens: False
+15:01:33 |     rank_candidates: False
+15:01:33 |     relu_dropout: 0.0
+15:01:33 |     save_after_valid: False
+15:01:33 |     save_every_n_secs: -1
+15:01:33 |     save_format: conversations
+15:01:33 |     seed: None
+15:01:33 |     share_word_embeddings: True
+15:01:33 |     short_final_eval: False
+15:01:33 |     skip_generation: False
+15:01:33 |     special_tok_lst: None
+15:01:33 |     split_lines: False
+15:01:33 |     starttime: Apr14_15-01
+15:01:33 |     task: blended_skill_talk
+15:01:33 |     teacher_seed: None
+15:01:33 |     temperature: 1.0
+15:01:33 |     tensorboard_log: False
+15:01:33 |     tensorboard_logdir: None
+15:01:33 |     text_truncate: None
+15:01:33 |     topk: 10
+15:01:33 |     topp: 0.9
+15:01:33 |     truncate: -1
+15:01:33 |     update_freq: 1
+15:01:33 |     use_reply: label
+15:01:33 |     validation_cutoff: 1.0
+15:01:33 |     validation_every_n_epochs: 0.5
+15:01:33 |     validation_every_n_secs: -1
+15:01:33 |     validation_every_n_steps: -1
+15:01:33 |     validation_max_exs: 1
+15:01:33 |     validation_metric: accuracy
+15:01:33 |     validation_metric_mode: None
+15:01:33 |     validation_patience: 10
+15:01:33 |     validation_share_agent: False
+15:01:33 |     variant: aiayn
+15:01:33 |     verbose: False
+15:01:33 |     wandb_entity: None
+15:01:33 |     wandb_log: False
+15:01:33 |     wandb_log_model: False
+15:01:33 |     wandb_name: None
+15:01:33 |     wandb_project: None
+15:01:33 |     warmup_rate: 0.0001
+15:01:33 |     warmup_updates: -1
+15:01:33 |     weight_decay: None
+15:01:33 |     world_logs: 
+15:01:33 | Current ParlAI commit: 6c802418e93a51cbb746b011439ab783dd136de8
+15:01:33 | Current internal commit: 6c802418e93a51cbb746b011439ab783dd136de8
+15:01:33 | Current fb commit: 6c802418e93a51cbb746b011439ab783dd136de8
+15:01:33 | creating task(s): blended_skill_talk
+15:01:33 | Loading ParlAI text data: /Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/data/blended_skill_talk/train.txt
+Building dictionary: 100%|████████████████| 27.0k/27.0k [00:00<00:00, 65.5kex/s]
+15:01:34 | Saving dictionary to /Users/yan/desktop/bot_II/my_saved_model.dict
+15:01:34 | dictionary built with 25345 tokens in 0.0s
+15:01:34 | No model with opt yet at: /Users/yan/desktop/bot_II/my_saved_model(.opt)
+15:01:34 | loading dictionary from /Users/yan/desktop/bot_II/my_saved_model.dict
+15:01:34 | num words = 25345
+15:01:34 | Total parameters: 11,113,500 (10,499,100 trainable)
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+15:01:35 | Opt:
+15:01:35 |     activation: relu
+15:01:35 |     adafactor_eps: '(1e-30, 0.001)'
+15:01:35 |     adam_eps: 1e-08
+15:01:35 |     add_p1_after_newln: False
+15:01:35 |     aggregate_micro: False
+15:01:35 |     allow_missing_init_opts: False
+15:01:35 |     attention_dropout: 0.0
+15:01:35 |     batchsize: 16
+15:01:35 |     beam_block_full_context: True
+15:01:35 |     beam_block_list_filename: None
+15:01:35 |     beam_block_ngram: -1
+15:01:35 |     beam_context_block_ngram: -1
+15:01:35 |     beam_delay: 30
+15:01:35 |     beam_length_penalty: 0.65
+15:01:35 |     beam_min_length: 1
+15:01:35 |     beam_size: 1
+15:01:35 |     betas: '(0.9, 0.999)'
+15:01:35 |     bpe_add_prefix_space: None
+15:01:35 |     bpe_debug: False
+15:01:35 |     bpe_dropout: None
+15:01:35 |     bpe_merge: None
+15:01:35 |     bpe_vocab: None
+15:01:35 |     checkpoint_activations: False
+15:01:35 |     compute_tokenized_bleu: False
+15:01:35 |     datapath: /Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/data
+15:01:35 |     datatype: train
+15:01:35 |     delimiter: '\n'
+15:01:35 |     dict_class: parlai.core.dict:DictionaryAgent
+15:01:35 |     dict_endtoken: __end__
+15:01:35 |     dict_file: /Users/yan/desktop/bot_II/my_saved_model.dict
+15:01:35 |     dict_include_test: False
+15:01:35 |     dict_include_valid: False
+15:01:35 |     dict_initpath: None
+15:01:35 |     dict_language: english
+15:01:35 |     dict_loaded: True
+15:01:35 |     dict_lower: False
+15:01:35 |     dict_max_ngram_size: -1
+15:01:35 |     dict_maxexs: -1
+15:01:35 |     dict_maxtokens: -1
+15:01:35 |     dict_minfreq: 0
+15:01:35 |     dict_nulltoken: __null__
+15:01:35 |     dict_starttoken: __start__
+15:01:35 |     dict_textfields: text,labels
+15:01:35 |     dict_tokenizer: re
+15:01:35 |     dict_unktoken: __unk__
+15:01:35 |     display_examples: False
+15:01:35 |     download_path: None
+15:01:35 |     dropout: 0.0
+15:01:35 |     dynamic_batching: None
+15:01:35 |     embedding_projection: random
+15:01:35 |     embedding_size: 300
+15:01:35 |     embedding_type: random
+15:01:35 |     embeddings_scale: True
+15:01:35 |     eval_batchsize: None
+15:01:35 |     eval_dynamic_batching: None
+15:01:35 |     evaltask: None
+15:01:35 |     ffn_size: 300
+15:01:35 |     final_extra_opt: 
+15:01:35 |     force_fp16_tokens: False
+15:01:35 |     fp16: False
+15:01:35 |     fp16_impl: safe
+15:01:35 |     gpu: -1
+15:01:35 |     gpu_beam_blocking: False
+15:01:35 |     gradient_clip: 0.1
+15:01:35 |     hide_labels: False
+15:01:35 |     history_add_global_end_token: None
+15:01:35 |     history_reversed: False
+15:01:35 |     history_size: -1
+15:01:35 |     image_cropsize: 224
+15:01:35 |     image_mode: raw
+15:01:35 |     image_size: 256
+15:01:35 |     inference: greedy
+15:01:35 |     init_model: None
+15:01:35 |     init_opt: None
+15:01:35 |     interactive_mode: False
+15:01:35 |     invsqrt_lr_decay_gamma: -1
+15:01:35 |     is_debug: False
+15:01:35 |     label_truncate: None
+15:01:35 |     learn_positional_embeddings: False
+15:01:35 |     learningrate: 1
+15:01:35 |     load_from_checkpoint: True
+15:01:35 |     log_every_n_secs: -1
+15:01:35 |     log_every_n_steps: 50
+15:01:35 |     log_keep_fields: all
+15:01:35 |     loglevel: info
+15:01:35 |     lr_scheduler: reduceonplateau
+15:01:35 |     lr_scheduler_decay: 0.5
+15:01:35 |     lr_scheduler_patience: 3
+15:01:35 |     max_train_steps: -1
+15:01:35 |     max_train_time: -1
+15:01:35 |     metrics: default
+15:01:35 |     model: transformer/generator
+15:01:35 |     model_file: /Users/yan/desktop/bot_II/my_saved_model
+15:01:35 |     model_parallel: False
+15:01:35 |     momentum: 0
+15:01:35 |     multitask_weights: [1]
+15:01:35 |     mutators: None
+15:01:35 |     n_decoder_layers: -1
+15:01:35 |     n_encoder_layers: -1
+15:01:35 |     n_heads: 2
+15:01:35 |     n_layers: 2
+15:01:35 |     n_positions: None
+15:01:35 |     n_segments: 0
+15:01:35 |     nesterov: True
+15:01:35 |     no_cuda: False
+15:01:35 |     num_epochs: -1
+15:01:35 |     num_workers: 0
+15:01:35 |     nus: (0.7,)
+15:01:35 |     optimizer: sgd
+15:01:35 |     output_scaling: 1.0
+15:01:35 |     override: "{'task': 'blended_skill_talk', 'model': 'transformer/generator', 'model_file': '/Users/yan/desktop/bot_II/my_saved_model', 'validation_every_n_epochs': 0.5, 'validation_max_exs': 1, 'batchsize': 16}"
+15:01:35 |     parlai_home: /Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages
+15:01:35 |     person_tokens: False
+15:01:35 |     rank_candidates: False
+15:01:35 |     relu_dropout: 0.0
+15:01:35 |     save_after_valid: False
+15:01:35 |     save_every_n_secs: -1
+15:01:35 |     save_format: conversations
+15:01:35 |     seed: None
+15:01:35 |     share_word_embeddings: True
+15:01:35 |     short_final_eval: False
+15:01:35 |     skip_generation: False
+15:01:35 |     special_tok_lst: None
+15:01:35 |     split_lines: False
+15:01:35 |     starttime: Apr14_15-01
+15:01:35 |     task: blended_skill_talk
+15:01:35 |     teacher_seed: None
+15:01:35 |     temperature: 1.0
+15:01:35 |     tensorboard_log: False
+15:01:35 |     tensorboard_logdir: None
+15:01:35 |     text_truncate: None
+15:01:35 |     topk: 10
+15:01:35 |     topp: 0.9
+15:01:35 |     truncate: -1
+15:01:35 |     update_freq: 1
+15:01:35 |     use_reply: label
+15:01:35 |     validation_cutoff: 1.0
+15:01:35 |     validation_every_n_epochs: 0.5
+15:01:35 |     validation_every_n_secs: -1
+15:01:35 |     validation_every_n_steps: -1
+15:01:35 |     validation_max_exs: 1
+15:01:35 |     validation_metric: accuracy
+15:01:35 |     validation_metric_mode: None
+15:01:35 |     validation_patience: 10
+15:01:35 |     validation_share_agent: False
+15:01:35 |     variant: aiayn
+15:01:35 |     verbose: False
+15:01:35 |     wandb_entity: None
+15:01:35 |     wandb_log: False
+15:01:35 |     wandb_log_model: False
+15:01:35 |     wandb_name: None
+15:01:35 |     wandb_project: None
+15:01:35 |     warmup_rate: 0.0001
+15:01:35 |     warmup_updates: -1
+15:01:35 |     weight_decay: None
+15:01:35 |     world_logs: 
+15:01:35 | Current ParlAI commit: 6c802418e93a51cbb746b011439ab783dd136de8
+15:01:35 | Current internal commit: 6c802418e93a51cbb746b011439ab783dd136de8
+15:01:35 | Current fb commit: 6c802418e93a51cbb746b011439ab783dd136de8
+15:01:35 | creating task(s): blended_skill_talk
+15:01:35 | Loading ParlAI text data: /Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/data/blended_skill_talk/train.txt
+15:01:35 | training...
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:01:49 | time:13s total_exs:800 total_steps:50 epochs:0.03
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   156.2     1  2499  9321       0          0 59.66  800  2.608 17.61 8.123   
+    lr  ltpb  ltps  ltrunc  ltrunclen  ppl  token_acc  token_em  \
+     1 281.8  1051       0          0 3373     .06089         0   
+    total_train_updates  tpb   tps   ups  
+                     50 2781 10371 3.729
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:02:02 | time:27s total_exs:1600 total_steps:100 epochs:0.06
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   151.9     1  2431  9264       0          0 60.97  800  2.389 16.91  7.08   
+    lr  ltpb  ltps  ltrunc  ltrunclen  ppl  token_acc  token_em  \
+     1 270.6  1031       0          0 1188     .08279         0   
+    total_train_updates  tpb   tps   ups  
+                    100 2702 10295 3.811
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:02:16 | time:41s total_exs:2400 total_steps:150 epochs:0.09
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+     153     1  2448  8982       0          0  58.7  800  2.358 16.95   6.8   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 271.2 994.8       0          0 897.4      .0874         0   
+    total_train_updates  tpb  tps   ups  
+                    150 2720 9977 3.669
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:02:29 | time:54s total_exs:3200 total_steps:200 epochs:0.12
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   161.4     1  2583  9614       0          0 59.55  800  2.367 18.07 6.505   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 289.1  1076       0          0 668.4      .1069         0   
+    total_train_updates  tpb   tps   ups  
+                    200 2872 10690 3.722
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:02:43 | time:68s total_exs:4000 total_steps:250 epochs:0.15
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   157.5     1  2519  9069       0          0 57.59  800  2.355 17.57 6.359   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 281.2  1012       0          0 577.7      .1265         0   
+    total_train_updates  tpb   tps  ups  
+                    250 2801 10081  3.6
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:02:56 | time:81s total_exs:4800 total_steps:300 epochs:0.18
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   158.5     1  2535  9359       0          0 59.06  800  2.318  18.1  6.23   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 289.6  1069       0          0 507.8      .1438         0   
+    total_train_updates  tpb   tps   ups  
+                    300 2825 10428 3.692
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:03:10 | time:95s total_exs:5600 total_steps:350 epochs:0.21
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   156.1     1  2498  9146       0          0 58.58  800  2.313 17.08 6.053   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 273.3  1001       0          0 425.6      .1567         0   
+    total_train_updates  tpb   tps   ups  
+                    350 2772 10147 3.661
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:03:24 | time:109s total_exs:6400 total_steps:400 epochs:0.24
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   159.3     1  2549  9416       0          0  59.1  800  2.396 17.09 6.026   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 273.4  1010       0          0 414.2      .1582         0   
+    total_train_updates  tpb   tps   ups  
+                    400 2823 10426 3.694
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:03:37 | time:122s total_exs:7200 total_steps:450 epochs:0.27
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   154.5     1  2471  9251       0          0 59.89  800  2.297 17.28 5.898   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 276.4  1035       0          0 364.4      .1678         0   
+    total_train_updates  tpb   tps   ups  
+                    450 2748 10286 3.744
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:03:50 | time:135s total_exs:8000 total_steps:500 epochs:0.30
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   155.9     1  2495  9475       0          0 60.77  800  2.251 17.93 5.905   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 286.9  1090       0          0 366.8      .1678         0   
+    total_train_updates  tpb   tps   ups  
+                    500 2781 10564 3.798
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:04:05 | time:150s total_exs:8800 total_steps:550 epochs:0.33
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   158.6     1  2537  8706       0          0  54.9  800  2.442 17.51 5.748   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 280.1 961.2       0          0 313.5      .1757         0   
+    total_train_updates  tpb  tps   ups  
+                    550 2817 9667 3.432
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:04:19 | time:164s total_exs:9600 total_steps:600 epochs:0.36
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   155.7     1  2491  8815       0          0 56.61  800  2.379 17.23 5.773   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 275.7 975.3       0          0 321.5      .1752         0   
+    total_train_updates  tpb  tps   ups  
+                    600 2767 9790 3.538
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:04:33 | time:178s total_exs:10400 total_steps:650 epochs:0.38
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   159.5     1  2551  9105       0          0  57.1  800  2.439 17.83 5.754   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 285.3  1018       0          0 315.4      .1771         0   
+    total_train_updates  tpb   tps   ups  
+                    650 2837 10123 3.569
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:04:46 | time:191s total_exs:11200 total_steps:700 epochs:0.41
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   157.1     1  2514  9297       0          0 59.17  800  2.411 17.52 5.593   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 280.4  1037       0          0 268.5      .1873         0   
+    total_train_updates  tpb   tps   ups  
+                    700 2794 10334 3.699
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:05:00 | time:205s total_exs:12000 total_steps:750 epochs:0.44
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   161.5     1  2583  9402       0          0 58.23  800  2.481 17.86 5.558   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 285.8  1040       0          0 259.4      .1907         0   
+    total_train_updates  tpb   tps  ups  
+                    750 2869 10443 3.64
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:05:14 | time:220s total_exs:12800 total_steps:800 epochs:0.47
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   163.6     1  2618  9147       0          0  55.9  800  2.297 18.67 5.552   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 298.7  1044       0          0 257.8      .1944         0   
+    total_train_updates  tpb   tps   ups  
+                    800 2917 10190 3.494
+
+/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/utils/misc.py:413: FutureWarning: The previous implementation of stack is deprecated and will be removed in a future version of pandas. See the What's New notes for pandas 2.1.0 for details. Specify future_stack=True to adopt the new implementation and silence this warning.
+  df = df.stack().transpose().droplevel(0, axis=1)
+15:05:26 | time:232s total_exs:13520 total_steps:845 epochs:0.50
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gnorm  llen  loss  \
+   153.8     1  2460  9186       0          0 59.74  720  2.357 16.79 5.478   
+    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  \
+     1 268.7  1003       0          0 239.5      .1967         0   
+    total_train_updates  tpb   tps   ups  
+                    845 2729 10189 3.734
+
+15:05:26 | creating task(s): blended_skill_talk
+15:05:26 | Loading ParlAI text data: /Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/data/blended_skill_talk/valid.txt
+15:05:27 | running eval: valid
+Traceback (most recent call last):
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/bin/parlai", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/__main__.py", line 14, in main
+    superscript_main()
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/core/script.py", line 325, in superscript_main
+    return SCRIPT_REGISTRY[cmd].klass._run_from_parser_and_opt(opt, parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/core/script.py", line 108, in _run_from_parser_and_opt
+    return script.run()
+           ^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/scripts/train_model.py", line 1060, in run
+    return self.train_loop.train()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/scripts/train_model.py", line 1010, in train
+    for _train_log in self.train_steps():
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/scripts/train_model.py", line 965, in train_steps
+    stop_training = self.validate()
+                    ^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/scripts/train_model.py", line 550, in validate
+    valid_report = self._run_eval(
+                   ^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/scripts/train_model.py", line 709, in _run_eval
+    task_report = self._run_single_eval(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/scripts/train_model.py", line 649, in _run_single_eval
+    valid_world.parley()
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/core/worlds.py", line 888, in parley
+    obs = self.batch_observe(other_index, batch_act, agent_idx)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/core/worlds.py", line 832, in batch_observe
+    observation = agents[index].observe(observation)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/core/teachers.py", line 542, in observe
+    self.metrics.evaluate_response(observation, self.lastY)
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/core/metrics.py", line 1050, in evaluate_response
+    self.add(f'bleu-{k}', BleuMetric.compute(prediction, labels, k))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/parlai/core/metrics.py", line 589, in compute
+    score = nltkbleu.sentence_bleu(
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/nltk/translate/bleu_score.py", line 107, in sentence_bleu
+    return corpus_bleu(
+           ^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/nltk/translate/bleu_score.py", line 210, in corpus_bleu
+    p_i = modified_precision(references, hypothesis, i)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yan/Desktop/bot_II/ParlAI/myenv/lib/python3.12/site-packages/nltk/translate/bleu_score.py", line 368, in modified_precision
+    return Fraction(numerator, denominator, _normalize=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Fraction.__new__() got an unexpected keyword argument '_normalize'
+(myenv) yan@MacBook-Pro-An Python-3.9.0 % 
